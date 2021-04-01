@@ -13,6 +13,7 @@
             <intent-filter>
                 <action android:name="com.viomi.kotlinactivitytest.ACTION_START"/>
                 <category android:name="android.intent.category.DEFAULT"></category>
+                <category android:name="com.viomi.kotlinactivitytest.MY_CATEGORY"></category>
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
