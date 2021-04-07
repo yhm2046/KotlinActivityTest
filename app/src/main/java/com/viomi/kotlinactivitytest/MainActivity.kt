@@ -1,8 +1,10 @@
 package com.viomi.kotlinactivitytest
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
@@ -11,10 +13,16 @@ import androidx.appcompat.app.AppCompatActivity
 import com.viomi.kotlinactivitytest.databinding.FirstLayoutBinding
 
 class MainActivity : AppCompatActivity() {
+    val TAG = "MainActivity tag"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = FirstLayoutBinding.inflate(layoutInflater)    //FirstLayoutBinding 是根据布局文件自动生成
         setContentView(binding.root)
+        binding.btn335.setOnClickListener {
+            val intent=Intent(this,SecondLayoutActivity::class.java)
+            startActivityForResult(intent,1)
+            Log.i(TAG,"click...")
+        }
         binding.btn1.text="auto change"
         binding.btn20.setOnClickListener {
             val intent=Intent("com.viomi.kotlinactivitytest.ACTION_START")  //隐式intent
@@ -30,6 +38,15 @@ class MainActivity : AppCompatActivity() {
 
     }//end onCreate
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when(requestCode){
+            1->if (resultCode== Activity.RESULT_OK){
+                val returnedData=data?.getStringExtra("data_return")
+                Log.i(TAG,"returnedData:$returnedData")
+            }
+        }
+    }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.add_item -> {
