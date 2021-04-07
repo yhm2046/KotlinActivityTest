@@ -38,7 +38,17 @@ class MainActivity : AppCompatActivity() {
                 intent.data = Uri.parse("https://www.google.com/ncr")
                 startActivity(intent)
             }
-            R.id.remove_item -> Toast.makeText(this, "removing..", Toast.LENGTH_LONG).show()
+            R.id.remove_item -> {
+                Toast.makeText(this, item.title, Toast.LENGTH_LONG).show()
+                val data="make money"
+                val data2=99
+                val data3=false
+                val intent = Intent(this,ThirdActivity::class.java)
+                intent.putExtra("data1",data)
+                intent.putExtra("data2",data2)
+                intent.putExtra("data3",data3)
+                startActivity(intent)
+            }
         }
         return true
     }
