@@ -18,5 +18,12 @@ class SecondLayoutActivity : AppCompatActivity() {
             setResult(RESULT_OK,intent)
             finish()
         }
+    }// end onCreate
+
+    override fun onBackPressed() {
+        val intent = Intent()
+        intent.putExtra("data_return","back first activity")
+        setResult(Activity.RESULT_OK,intent)
+        finish()
     }
 }
