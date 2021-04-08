@@ -25,6 +25,8 @@ class ThirdActivity : BaseActivity() {
         binding.btnChangeTest.setOnClickListener {
 //            退出
              ActivityCollector.finishAll()
+            Log.d(TAG,"kill pid------------>${android.os.Process.myPid()}")
+            android.os.Process.killProcess(android.os.Process.myPid())
 //            val data1=intent.getStringExtra("data1")
 //            Log.i(TAG,"data1 is $data1")
 //            val data2=intent.getIntExtra("data2",0)
