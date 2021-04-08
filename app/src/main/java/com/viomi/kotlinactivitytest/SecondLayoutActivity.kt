@@ -1,6 +1,7 @@
 package com.viomi.kotlinactivitytest
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -23,7 +24,15 @@ class SecondLayoutActivity : BaseActivity() {
 //            finish()
         }
     }// end onCreate
-
+    companion object{   //启动activity的最佳传递参数写法
+        fun actionStart(context: Context, data1:String, data2:String){
+            Log.d("tag:companion","data1:$data1,data2:$data2")
+            val intent=Intent(context,SecondLayoutActivity::class.java)
+            intent.putExtra("param1",data1)
+            intent.putExtra("param2",data2)
+            context.startActivity(intent)
+        }
+    }//end object
     override fun onBackPressed() {
         val intent = Intent()
         intent.putExtra("data_return","back first activity")

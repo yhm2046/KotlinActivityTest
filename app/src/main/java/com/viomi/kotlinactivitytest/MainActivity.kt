@@ -20,8 +20,10 @@ class MainActivity : BaseActivity() {
         Log.d(TAG,"first activity task id:$taskId")
         setContentView(binding.root)
         binding.btn351.setOnClickListener {//测试standard模式
-              val intent=Intent(this,SecondLayoutActivity::class.java)
-            startActivity(intent)
+//              val intent=Intent(this,SecondLayoutActivity::class.java)
+//            startActivity(intent)
+//            一句话启动activity
+            SecondLayoutActivity.actionStart(this,"fuck1","fuck2")
         }
         binding.btn335.setOnClickListener {
             val intent=Intent(this,SecondLayoutActivity::class.java)
