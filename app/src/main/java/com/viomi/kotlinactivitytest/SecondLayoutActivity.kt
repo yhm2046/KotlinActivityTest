@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import com.viomi.kotlinactivitytest.databinding.SecondLayoutBinding
 
-class SecondLayoutActivity : AppCompatActivity() {
+class SecondLayoutActivity : BaseActivity() {
     private val tag="SecondLayoutActivity:tag"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.viomi.kotlinactivitytest.databinding.FirstLayoutBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     val TAG = "MainActivity tag"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

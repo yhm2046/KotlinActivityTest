@@ -8,7 +8,7 @@ import android.util.Log
 import com.viomi.kotlinactivitytest.databinding.FirstLayoutBinding
 import com.viomi.kotlinactivitytest.databinding.ThirdLayoutBinding
 
-class ThirdActivity : AppCompatActivity() {
+class ThirdActivity : BaseActivity() {
     val TAG="ThirdActivity_TAG"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
