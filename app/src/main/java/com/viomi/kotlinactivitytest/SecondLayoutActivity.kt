@@ -4,19 +4,23 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.viomi.kotlinactivitytest.databinding.SecondLayoutBinding
 
 class SecondLayoutActivity : AppCompatActivity() {
+    private val tag="SecondLayoutActivity:tag"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.second_layout)
         val binding =SecondLayoutBinding.inflate(layoutInflater)
+        Log.d(tag,"oncreate:${this.toString()}")
         setContentView(binding.root)
         binding.btn2.setOnClickListener {
-            val intent = Intent()
-            intent.putExtra("data_return","hello firstactiviy")
-            setResult(RESULT_OK,intent)
-            finish()
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+//            intent.putExtra("data_return","hello firstactiviy")
+//            setResult(RESULT_OK,intent)
+//            finish()
         }
     }// end onCreate
 
