@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = FirstLayoutBinding.inflate(layoutInflater)    //FirstLayoutBinding 是根据布局文件自动生成
         setContentView(binding.root)
+        binding.btn351.setOnClickListener {//测试standard模式
+            Log.d(TAG,"btn351 click...")
+            val intent=Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
         binding.btn335.setOnClickListener {
             val intent=Intent(this,SecondLayoutActivity::class.java)
             startActivityForResult(intent,1)

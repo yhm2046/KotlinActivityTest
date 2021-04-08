@@ -18,4 +18,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="3.3.5test" />
+    <Button
+        android:id="@+id/btn351"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3.5.1test" />
 </LinearLayout>
