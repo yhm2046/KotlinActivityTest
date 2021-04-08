@@ -23,12 +23,14 @@ class ThirdActivity : BaseActivity() {
         }
         binding.btnChangeTest.setText("test put data")
         binding.btnChangeTest.setOnClickListener {
-            val data1=intent.getStringExtra("data1")
-            Log.i(TAG,"data1 is $data1")
-            val data2=intent.getIntExtra("data2",0)
-            Log.i(TAG,"data2 is $data2")
-            val data3=intent.getBooleanExtra("data3",true)
-            Log.i(TAG,"data3 is $data3")
+//            退出
+             ActivityCollector.finishAll()
+//            val data1=intent.getStringExtra("data1")
+//            Log.i(TAG,"data1 is $data1")
+//            val data2=intent.getIntExtra("data2",0)
+//            Log.i(TAG,"data2 is $data2")
+//            val data3=intent.getBooleanExtra("data3",true)
+//            Log.i(TAG,"data3 is $data3")
         }
     }
 }

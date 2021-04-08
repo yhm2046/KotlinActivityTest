@@ -10,5 +10,11 @@ open class BaseActivity :AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(tag,"$tag:${javaClass.simpleName}")
+        ActivityCollector.addActivity(this)
+    }
+
+    override fun onDestroy() {  //销毁
+        super.onDestroy()
+        ActivityCollector.removeActivity(this)
     }
 }
