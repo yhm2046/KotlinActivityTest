@@ -44,6 +44,14 @@ class MainActivity : AppCompatActivity() {
 
     }//end onCreate
 
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG,"first onDestory..")
+    }
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(TAG,"first onRestart..")
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when(requestCode){
