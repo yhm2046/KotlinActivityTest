@@ -18,10 +18,10 @@
                 <data android:scheme="https"/>
             </intent-filter>
         </activity>
-        <activity android:name=".SecondLayoutActivity">
+        <activity android:name=".SecondLayoutActivity"
+            android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="com.viomi.kotlinactivitytest.ACTION_START" />
-
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="com.viomi.kotlinactivitytest.MY_CATEGORY" />
             </intent-filter>

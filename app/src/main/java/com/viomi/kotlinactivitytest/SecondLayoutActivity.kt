@@ -13,10 +13,10 @@ class SecondLayoutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.second_layout)
         val binding =SecondLayoutBinding.inflate(layoutInflater)
-        Log.d(tag,"oncreate:${this.toString()}")
+        Log.d(tag,"oncreate taskid:$taskId")
         setContentView(binding.root)
         binding.btn2.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this,ThirdActivity::class.java)
             startActivity(intent)
 //            intent.putExtra("data_return","hello firstactiviy")
 //            setResult(RESULT_OK,intent)

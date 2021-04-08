@@ -17,11 +17,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = FirstLayoutBinding.inflate(layoutInflater)    //FirstLayoutBinding 是根据布局文件自动生成
-        Log.d(TAG,"first activity:${this.toString()}.")
+        Log.d(TAG,"first activity task id:$taskId")
         setContentView(binding.root)
         binding.btn351.setOnClickListener {//测试standard模式
-
-            val intent=Intent(this,SecondLayoutActivity::class.java)
+              val intent=Intent(this,SecondLayoutActivity::class.java)
             startActivity(intent)
         }
         binding.btn335.setOnClickListener {

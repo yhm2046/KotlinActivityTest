@@ -13,6 +13,7 @@ class ThirdActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ThirdLayoutBinding.inflate(layoutInflater)    //FirstLayoutBinding 是根据布局文件自动生成
+        Log.d(TAG,"taskid:$taskId")
         setContentView(binding.root)
         binding.btn3.text="phone"
         binding.btn3.setOnClickListener {   // 调用拨号界面
