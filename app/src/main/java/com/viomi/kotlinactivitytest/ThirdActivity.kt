@@ -1,4 +1,7 @@
-package com.viomi.kotlinactivitytest
+import com.viomi.kotlinactivitytest.ActivityCollector
+import com.viomi.kotlinactivitytest.BaseActivity
+
+//gitpackage com.viomi.kotlinactivitytest
 
 import android.content.Context
 import android.content.Intent
